@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="container mt-5 mb-5">
+    <h3 class="mb-3">Venez reserver vos vacances </h3>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card shadow" style="width: 18rem;">
+                <img src="{% static 'image/neuro.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Neurologie</h5>
+                  <p class="card-text">L'objectif de la kinésithérapie neurologique est d'améliorer l'indépendance fonctionnelle dans la vie quotidienne suite à des affections pouvant altérer la marche, l'équilibre, la force, la dextérité, la coordination et l'endurance.</p>
+                  <a href="{% url 'kinesin' %}" class="btn btn-primary">Choisir</a>
+                </div>
+              </div>
+            </div>
+              <div class="col-lg-4">
+                <div class="card shadow" style="width: 18rem;">
+                    <img src="{% static 'image/trau.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Traumatologie</h5>
+                      <p class="card-text">La kinésithérapie traumatologique permet d'éviter les complications telles que la raideur articulaire ou la fonte musculaire, tout en favorisant une réharmonisation du mouvement.</p>
+                      <a href="{% url 'kinesit' %}" class="btn btn-primary">Choisir</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow" style="width: 18rem;">
+                        <img src="{% static 'image/Rhum.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Rhumatologie</h5>
+                          <p class="card-text">La rhumatologie en kinésithérapie regroupe les soins et la rééducation des affections chroniques du rachis et des articulations ; lombalgies, cervicalgies, névralgies cervico-brachiales, coxarthroses (arthrose des hanches), gonarthroses (des genoux), des épaules etc.</p>
+                          <a href="{% url 'kinesir' %}" class="btn btn-primary">Choisir</a>
+                        </div>
+                      </div>
+                    </div>   
+    </div>
+</div>
+{% endblock %}

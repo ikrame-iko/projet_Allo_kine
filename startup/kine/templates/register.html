@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<div class="container mt-4 mb-4">
+  <!-- {% if error != None %}
+      <div>
+        <p> {{ error }}</p>
+      </div>
+  {% endif %} -->
+    <div class="col-lg-6 shadow p-2">
+        <h2>S'inscrire</h2>
+        <form action="register" method="post">
+          {% csrf_token %}  
+          <div class="form-row">
+                <div class="col">
+                    <label for="exampleInputName">Nom</label>
+                    <input type="text" name="nom" class="form-control" placeholder="Last name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="exampleInputPrenom">Prénom</label>
+                  <input type="text" name="prenom" class="form-control" placeholder="First name" required>
+                </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col">
+                <label for="inputEmail4">Adresse Email</label>
+                <input  type="email" name="email" class="form-control" id="inputEmail4" placeholder="name@example.com" required>
+                
+              </div>
+              
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Mot de passe</label>
+                <input type="password" name="password" class="form-control" id="inputPassword4" required>
+          
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="inputNumTelephone">Téléphone</label>
+                <input type="number" name="telephone" class="form-control" id="inputNumTelephone" placeholder="+212 6XX-XXXXXX" required>
+              </div>
+            <div class="form-group">
+              <label for="inputAddress">Adresse</label>
+              <input type="text" name="adresse"class="form-control" id="inputAddress" required>
+            </div>
+            
+            
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Connecter</button>
+          </form>
+        </div>
+    
+    </div>
+    <div class="col-lg-6">
+      <img src="{% static 'image/reg.svg' %}" alt="" class="img-fluid img-reponsive" height="800" width="800">
+
+    </div>
+    
+</div>
+{% endblock %}
